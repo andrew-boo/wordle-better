@@ -35,13 +35,14 @@ window.addEventListener('keyup', (event) => {
 let arrGreen = [];
 let arrYellow = [];
 let arrGrey = [];
-
+var x = document.getElementById("myAudio"); 
 
 function checkWord() {
     if (!wordList.includes(arrWord.join(''))) {
         alert.innerText = 'This is not a valid word!';
         document.body.style.backgroundImage = 'url("https://i.ibb.co/gRsVPHx/258897930-1038201813410360-2142617931254569161-n.jpg")';
         alert.style.Height = '1000px';
+        x.play(); 
         //checks if the word being checked belongs to our word list/dictionary
     } else if (arrWord.join(',') === arrSol.join(',')) {
         alert.innerText = '';
